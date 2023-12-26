@@ -173,28 +173,6 @@ Data class JsonSerializable(createToJson: false)
 	},
 ```
 
-Data class JsonSerializable(createToJson: false)
-
-```json
-	"dataClassFrom": {
-		"prefix": "dataClassFrom",
-		"body": [
-			"import 'package:json_annotation/json_annotation.dart';",
-			"",
-			"part '$TM_FILENAME_BASE.g.dart';",
-			"",
-			"@JsonSerializable(createToJson: false)",
-			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}{",
-			"\tconst ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}();",
-			"",
-			"\tfactory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}.fromJson(Map<String, dynamic> json) => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}FromJson(json);",
-			"",
-			"\t$1",
-			"}",
-		]
-	},
-```
-
 Data class
 
 ```json
